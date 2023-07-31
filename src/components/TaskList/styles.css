@@ -1,0 +1,117 @@
+.tasklistContainer{
+    width:100%;
+    height: 30rem;
+    border-radius: 20px;
+
+    
+}
+
+.tasklistContainer h3{
+    width: 100%;
+    text-align: center;
+    color: white;
+    border-bottom: 1px dashed white;
+    padding-bottom: 10px;
+}
+
+.tasklistContainer ol{
+    padding: 0;
+    margin: 0;
+    padding: 0 10px;
+}
+.tasklistContainer ol li.listItem{
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: 0.3s all;
+}
+
+.tasklistContainer ol li.draggingListItem{
+    opacity: 0.5;
+}
+
+
+.tasklistContainer ol li.listItem p{
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+.tasklistContainer ol li.listItem .buttonGroup{
+    padding-right: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.tasklistContainer ol li.listItem button{   
+    outline: none;
+    border: none;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tasklistContainer ol li.listItem button.inProgressButton{
+    background-color: goldenrod;
+}
+
+.tasklistContainer ol li.listItem button.completeButton{
+    background-color: green;
+}
+
+.tasklistContainer ol li.listItem button.deleteButton{
+    background-color: crimson;
+}
+
+.tasklistContainer ol li.listItem button.inProgressButton:hover{
+    background-color: white;
+    color:  goldenrod;
+}
+.tasklistContainer ol li.listItem button.deleteButton:hover{
+    background-color: white;
+    color:  crimson;
+}
+
+.tasklistContainer ol li.listItem:hover{
+    background-color: white;
+    background-color: rgba(255, 255, 255,0.4);
+}
+
+.tasklistContainer .noTaskContainer{
+    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+
+@media only screen and (max-width: 550px) {
+    .tasklistContainer{
+        height: 25rem;
+        
+    }
+
+    .tasklistContainer ol li.listItem{
+        grid-template-columns: 50% 50%;
+    }
+
+    .tasklistContainer ol li.listItem p{
+        font-size: 13px;
+    }
+  }

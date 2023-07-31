@@ -1,0 +1,89 @@
+.newTaskContainer{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(11, 131, 237,0.8);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newTaskContainer h3{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+    color: white;
+    border-bottom: 1px dashed white;
+}
+
+.newTaskContainer span p{
+    font-size: 18px;
+    font-weight: 500;
+    margin: 10px;
+}
+
+.newTaskContainer span{
+    color: white;
+    width: 80%;
+}
+
+.newTaskContainer .buttonGroup{
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.newTaskContainer .buttonGroup button{
+    outline: none;
+    border: none;
+    color: white;
+    height: 40px;
+    width: 70px;
+    margin: 0 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.newTaskContainer .buttonGroup button.disabledButton{
+    color: grey;
+    cursor: no-drop;
+}
+
+.newTaskContainer .buttonGroup button.saveButton{
+    background-color: green;
+}
+
+.newTaskContainer .buttonGroup button.cancelButton{
+    background-color: crimson;
+}
+
+.newTaskContainer .buttonGroup button.saveButton:hover{
+    color:  green;
+    background-color: white;
+}
+
+.newTaskContainer .buttonGroup button.cancelButton:hover{
+    color:  crimson;
+    background-color: white;
+}
+
+.newTaskContainer input{
+    width: 100%;    
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+
+.newTaskContainer textarea{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
