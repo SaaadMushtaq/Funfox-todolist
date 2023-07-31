@@ -21,6 +21,21 @@ const TaskList: FC<taskListType> = ({ title, dropRef, tasks, setTaskList }) => {
     useState<string>("");
   const [selectedTaskIndex, setSelectedTaskIndex] = useState<number>(0);
 
+  const handleChangeTaskStatus = (id: string) => {
+    setTaskList((prev) => {
+      const mTasks = prev.map((task, i) => {
+        if (task.id === id) {
+          const updatedTask: TaskItemType = {
+            ...task,
+            completed: !task.completed,
+          };
+          return updatedTask;
+        }
+        return task;
+      });
+      return mTasks;
+    });
+  };
   const handleDeleteTask = (index: number) => {
     const updatedList = tasks.filter((_, i) => i !== index);
     setTaskList(updatedList);
@@ -96,6 +111,7 @@ const TaskList: FC<taskListType> = ({ title, dropRef, tasks, setTaskList }) => {
                 handleDeleteTask={handleDeleteTask}
                 index={index}
                 task={task}
+                handleChangeTaskStatus={handleChangeTaskStatus}
               />
             ))}
           </ol>

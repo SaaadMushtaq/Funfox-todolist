@@ -63,12 +63,10 @@
     transition: all 0.2s;
 }
 
-.tasklistContainer ol li.listItem button.inProgressButton{
-    background-color: goldenrod;
-}
 
 .tasklistContainer ol li.listItem button.completeButton{
     background-color: green;
+    margin-right: 5px;
 }
 
 .tasklistContainer ol li.listItem button.deleteButton{

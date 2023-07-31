@@ -5,6 +5,7 @@ import { TaskItemType } from "../../types";
 interface taskItemProps {
   handleOnClickTask: (index: number) => void;
   handleDeleteTask: (index: number) => void;
+  handleChangeTaskStatus: (id: string) => void;
   index: number;
   task: TaskItemType;
 }
@@ -12,6 +13,7 @@ interface taskItemProps {
 const TaskItem: FC<taskItemProps> = ({
   handleOnClickTask,
   handleDeleteTask,
+  handleChangeTaskStatus,
   index,
   task,
 }) => {
@@ -32,6 +34,12 @@ const TaskItem: FC<taskItemProps> = ({
         {index + 1}. {task.title}
       </p>
       <div className="buttonGroup">
+        <button
+          className="completeButton"
+          onClick={() => handleChangeTaskStatus(task.id)}
+        >
+          {task.completed ? "Un-Do" : "Done"}
+        </button>
         <button
           className="deleteButton"
           onClick={() => handleDeleteTask(index)}
